@@ -21,9 +21,6 @@ public class UserRegistration {
         }
     }
 
-    /**
-     * UC-2 This method is validating the last name of the user is correct or not.
-     */
     private void validLastName() {
         System.out.println("Enter the Last name: ");
         String name = scanner.next();
@@ -52,10 +49,6 @@ public class UserRegistration {
 
     }
 
-    /**
-     * UC-4 This method is validating the Mobile number of the user is correct or
-     * not.
-     */
     private void validMobileNo() {
         System.out.println("Enter the Mobile number: ");
         String mobileNumber = scanner.nextLine();
@@ -73,7 +66,7 @@ public class UserRegistration {
     private void validPassword() {
         System.out.println("Enter the password: ");
         String password = scanner.nextLine();
-        String regex = "^(?=.*[A-Z]).{8,}$";
+        String regex = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(password);
         boolean b = m.matches();
@@ -90,5 +83,3 @@ public class UserRegistration {
     }
 
 }
-
- 
