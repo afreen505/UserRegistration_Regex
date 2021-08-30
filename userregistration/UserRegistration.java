@@ -66,7 +66,7 @@ public class UserRegistration {
     private void validPassword() {
         System.out.println("Enter the password: ");
         String password = scanner.nextLine();
-        String regex = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+        String regex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(password);
         boolean b = m.matches();
